@@ -1,0 +1,162 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background 1s ease;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffc6;
+  text-shadow: 0 0 15px #00ffc6;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+/* Mood Buttons */
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.mood-buttons button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #00ffc6;
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 198, 0.3);
+}
+
+.mood-buttons button:hover {
+  background: #00ffc6;
+  color: #111;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffc6;
+}
+
+/* Singer Dropdown */
+.singer-select {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.singer-select label {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  color: #a8ffe9;
+}
+
+.singer-select select {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #00ffc6;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.singer-select select:hover {
+  background: #00ffc6;
+  color: #111;
+}
+
+/* Video Container */
+.video-container {
+  text-align: center;
+  margin: 2rem 0;
+  width: 80%;
+  max-width: 800px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 255, 198, 0.3);
+  transition: all 0.4s ease-in-out;
+}
+
+.video-container p {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+/* Footer Vibe */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+footer span {
+  color: #00ffc6;
+}
+/* 🎵 Equalizer Animation */
+.equalizer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  height: 40px;
+  margin-top: 10px;
+  visibility: hidden;
+}
+
+.equalizer .bar {
+  width: 6px;
+  height: 10px;
+  background: #00ffc6;
+  border-radius: 5px;
+  animation: bounce 1s infinite ease-in-out;
+  box-shadow: 0 0 10px #00ffc6;
+}
+
+.equalizer .bar:nth-child(1) { animation-delay: 0s; }
+.equalizer .bar:nth-child(2) { animation-delay: 0.2s; }
+.equalizer .bar:nth-child(3) { animation-delay: 0.4s; }
+.equalizer .bar:nth-child(4) { animation-delay: 0.6s; }
+.equalizer .bar:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes bounce {
+  0%, 100% { height: 10px; opacity: 0.6; }
+  50% { height: 35px; opacity: 1; }
+}
+

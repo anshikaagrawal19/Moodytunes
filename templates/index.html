@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodTunes 🎧</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Flask static file linking -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>🎵 MoodTunes</h1>
+    <p>Listen to music that matches your mood!</p>
+  </header>
+  <!-- Animated Equalizer -->
+<div class="equalizer" id="equalizer">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+
+  <main>
+    <div class="mood-buttons">
+      <button data-mood="happy">😊 Happy</button>
+      <button data-mood="sad">😢 Sad</button>
+      <button data-mood="heartbreak">💔 Heartbreak</button>
+      <button data-mood="motivational">💪 Motivational</button>
+      <button data-mood="romantic">💖 Romantic</button>
+      <button data-mood="neutral">😌 Neutral</button>
+      <button data-mood="energetic">⚡ Energetic</button>
+    </div>
+
+    <!-- Favorite Singer Selection -->
+    <div class="singer-select">
+      <label for="singer">🎤 Choose Your Favorite Singer:</label>
+      <select id="singer">
+        <option value="">-- Select --</option>
+        <option value="arijit singh">Arijit Singh</option>
+        <option value="atif aslam">Atif Aslam</option>
+        <option value="karan aujla">Karan Aujla</option>
+        <option value="kishore kumar">Kishore Kumar</option>
+        <option value="kumar sanu">Kumar Sanu</option>
+        <option value="udit narayan">Udit Narayan</option>
+        <option value="kk">KK</option>
+        <option value="pritam">Pritam</option>
+      </select>
+    </div>
+
+    <div class="video-container" id="video-container">
+      <p>Select a mood or your favorite singer to start playing songs 🎶</p>
+    </div>
+  </main>
+</body>
+</html>
